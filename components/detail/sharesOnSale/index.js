@@ -44,6 +44,9 @@ export default function SharesOnSale({ horse }) {
     setBuyNowState(horse?.saleHistory[lastIndex]?.ps);
   }, []);
 
+  console.log("sellerIbfo", horse?.saleInfo[lastIndex]?.sellerAddress);
+  console.log("sellerIbfo", horse?.saleInfo);
+
   const handleLeftAmount = (e) => {
     setAmount(e.target.value);
   };
@@ -77,8 +80,8 @@ export default function SharesOnSale({ horse }) {
         horseId: horse.horseId,
         buyerAddress: account?.data,
         sellerAddress: horse.publicAddress,
-        price: horse.saleInfo[lastIndex].price,
-        ps: horse.saleInfo[lastIndex].ps - leftAmount,
+        price: horse.saleInfo[0].price,
+        ps: horse.saleInfo[0].ps - leftAmount,
         totalAmount: horse.totalAmount,
         saleId: horse.horseId,
       })
@@ -194,23 +197,20 @@ export default function SharesOnSale({ horse }) {
       key: i,
       owner: {
         name: "Alexia Cambell",
-        userName: `@${horse.saleInfo[lastIndex].sellerAddress.slice(
+        userName: `@${horse?.saleInfo[0]?.sellerAddress.slice(
           0,
           5
-        )}...${horse.saleInfo[lastIndex].sellerAddress.slice(-5)}`,
+        )}...${horse?.saleInfo[0]?.sellerAddress.slice(-5)}`,
         avatar: "https://i.pravatar.cc/80",
       },
-      ownerPercent: `${horse.totalAmount}`, // Changed to show total mint amount
-      sellingPercent: `${horse.saleInfo[lastIndex].ps}`,
+      ownerPercent: `${horse?.totalAmount}`, // Changed to show total mint amount
+      sellingPercent: `${horse?.saleInfo[0]?.ps}`,
       price: `${
-        web3?.utils?.fromWei(horse?.saleInfo[lastIndex].price, "ether") * 1500
-      } $ OR ${web3?.utils?.fromWei(
-        horse?.saleInfo[lastIndex].price,
-        "ether"
-      )} ETH`,
+        web3?.utils?.fromWei(horse?.saleInfo[0]?.price, "ether") * 1500
+      } $ OR ${web3?.utils?.fromWei(horse?.saleInfo[0]?.price, "ether")} ETH`,
       actionButton: {
         id: i,
-        saleInfo: horse.saleInfo[lastIndex],
+        saleInfo: horse?.saleInfo[0],
       },
     });
   }
