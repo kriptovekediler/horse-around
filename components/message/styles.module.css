@@ -1,0 +1,31 @@
+.box{
+    background: rgba(68, 68, 68, 0.3);
+    @apply
+    rounded-lg
+    p-6
+
+}
+.itemBox{
+    @apply
+    border border-goldMetallic 
+    rounded-lg
+    flex mb-5
+}
+.countBox{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(57, 37, 11, 0.7);
+    @apply
+    /* bg-goldMetallic */
+    text-white text-base 2xl:text-2xl font-PoppinsSemiBold
+   p-3 2xl:p-5 flex items-center
+    rounded-l-lg
+}
+.itemUserCard{
+    @apply
+    p-5
+    flex gap-4 w-full
+}
+.messageBox{
+    @apply
+    flex gap-5 md:flex-wrap sm:flex-wrap 
+    border-b border-goldMetallic pb-10
+}

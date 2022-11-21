@@ -1,0 +1,25 @@
+.box{
+    @apply
+    bg-dark30
+    py-11 px-10 sm:px-2 md:px-3
+    rounded-lg
+}
+.modalTitle{
+    @apply
+    text-goldMetallic  font-PoppinsSemiBold  text-lg 2xl:text-2xl
+    mb-7
+}
+.modalInfoText{
+    @apply
+    text-white text-base 2xl:text-lg block w-full
+}
+.userName{
+    @apply
+    text-white text-lg 2xl:text-xl font-PoppinsBold
+    mb-10 block
+}
+.button{
+    @apply
+    w-full h-11 rounded-md text-white text-base 2xl:text-xl 
+    mb-4
+}

@@ -1,0 +1,24 @@
+.box{
+    @apply
+    px-32 py-28
+}
+.cardImage{
+    @apply
+    h-52 2xl:h-80 rounded-tr-lg 
+     bg-cover
+}
+.gridBox{
+    @apply
+    grid grid-cols-2  gap-10
+    xl:grid-cols-2 sm:grid-cols-1
+}
+.item{
+    color: rgba(255, 255, 255, 0.6);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    @apply
+    pb-3 hover:text-white flex items-center gap-2
+    text-lg 
+    transition
+    w-full
+
+}

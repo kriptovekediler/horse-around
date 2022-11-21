@@ -1,0 +1,7 @@
+.box{
+    @apply
+    bg-dark30
+    py-11 px-20 sm:px-2 md:px-3
+    rounded-lg
+
+}

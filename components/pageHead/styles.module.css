@@ -1,0 +1,21 @@
+.home{
+    @apply
+    relative
+     bg-cover bg-left bg-no-repeat
+    w-screen mb-28
+   
+}
+.headTextBox{
+    @apply
+    absolute top-48 w-full text-center
+    text-white
+}
+.title{
+    @apply
+    text-6xl leading-[96px] font-PoppinsBold
+    text-white
+}
+.subTitle{
+    @apply
+    text-4xl 
+}

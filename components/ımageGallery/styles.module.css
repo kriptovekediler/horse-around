@@ -1,0 +1,20 @@
+.bigImage{
+    @apply
+    border-4 border-goldMetallic rounded 
+    relative
+}
+.image{
+    @apply
+    border-4 border-transparent rounded 
+    hover:border-goldMetallic
+    transition
+    cursor-pointer
+   
+}
+.likeButton{
+    @apply
+    absolute
+    z-20 top-4 right-4 w-max rounded bg-goldMetallic text-white flex items-center gap-2 px-4
+    h-11
+    hover:bg-black transition cursor-pointer
+}

@@ -1,0 +1,51 @@
+.topHorsesBox{
+    @apply
+    font-bold
+    px-32 py-28
+    bg-[#25221F]
+    
+
+}
+.horsesLists{
+    @apply
+    grid grid-rows-3 grid-flow-col gap-4
+    xl:grid-rows-5
+}
+.cardBox{
+    @apply
+    border border-goldMetallic rounded-[10px]
+    flex justify-items-start
+    w-full
+}
+.number{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(57, 37, 11, 0.7);
+    @apply
+    text-white text-2xl text-center px-5 rounded-[10px] min-h-[112px] flex items-center
+ 
+}
+.topHorseInfoBox{
+    @apply
+    w-full flex justify-between gap-2
+    px-5 py-4
+}
+.horseInfo{
+    @apply
+    w-full flex flex-wrap
+}
+.horseInfoImg{
+    @apply
+    
+    rounded-[10px]
+}
+.horseName{
+    @apply
+    text-white text-xl
+}
+.statusBox{
+    @apply
+    flex w-full items-center gap-1
+}
+.statusTitle{
+    @apply
+    text-white text-lg 
+}

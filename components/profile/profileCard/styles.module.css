@@ -1,0 +1,44 @@
+.card{
+    @apply
+    relative
+    text-center 
+}
+.avatarBox{
+    @apply
+    relative text-center
+    w-[136px] inline-block
+}
+.avatar{
+    @apply
+    rounded mb-6
+}
+.userName{
+    @apply
+    text-xl xl:text-base font-PoppinsSemiBold
+    mb-3 block
+    text-white
+}
+.userDesc{
+    @apply
+   block w-full
+    text-base xl:text-sm
+}
+.menu{
+    @apply
+    mx-auto inline-block mt-4
+}
+.navLink{
+    @apply
+    flex items-center gap-3
+    mb-3
+}
+.navLinkText{
+    @apply
+    transition
+    hover:text-goldMetallic
+}
+.editIcon{
+    @apply
+    transition
+    absolute -top-4 -right-4 hover:bg-goldMetallic rounded-3xl p-1 cursor-pointer
+}

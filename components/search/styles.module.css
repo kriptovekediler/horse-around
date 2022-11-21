@@ -1,0 +1,27 @@
+.searchBox{
+    @apply
+    absolute w-1/2 xl:w-3/4
+    bottom-1/4
+    px-[12rem]
+
+}
+.searchBoxTitle{
+    @apply
+    text-[64px] leading-[96px] font-bold text-white
+}
+.searchBoxSpan{
+    @apply
+    text-white text-4xl block mb-3 font-normal
+}
+.searchBoxInput{
+    @apply
+    w-full
+    text-xl text-[#150e034d] rounded
+    pl-7 pr-36 h-[80px]
+}
+.searchBoxButton{
+    @apply
+    absolute
+    text-xl leading-8 px-20  h-[64px] rounded font-semibold
+    right-2 top-2 text-black bg-goldMetallic  hover:text-white transition
+}

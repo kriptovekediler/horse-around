@@ -1,0 +1,22 @@
+.box{
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(248,247,247,1) 51%, rgba(248,247,247,1) 100%);
+    @apply
+    h-16 w-16 rounded
+    flex items-center justify-center
+    text-goldMetallic text-xl font-PoppinsSemiBold mb-4 block
+}
+.boxSmall{
+    @apply
+    !h-[60px] !w-[60px]
+}
+.boxBig{
+    @apply
+    !h-[80px] !w-[80px]
+}
+
+.darkBox{
+    @apply
+    rounded-md px-4 py-3 bg-[#4444444D]
+    
+}

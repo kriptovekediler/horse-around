@@ -1,0 +1,21 @@
+.box{
+    border-bottom: 2px solid rgba(68, 68, 68, 0.7);
+    @apply
+    py-5 2xl:py-10
+}
+.box:last-child{
+    border:none
+}
+.name{
+    @apply
+    text-base 2xl:text-xl mb-2 font-PoppinsSemiBold block
+
+}
+.unfollowButton{
+    border: 2px solid rgba(68, 68, 68, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    @apply
+    h-11 px-2 rounded-lg
+    text-sm 2xl:text-xl font-PoppinsSemiBold
+    hover:bg-goldMetallic hover:text-white transition
+}

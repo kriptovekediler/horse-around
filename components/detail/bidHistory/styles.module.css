@@ -1,0 +1,12 @@
+.box{
+    @apply
+    bg-dark30
+    py-11 px-32 sm:px-2 md:px-3
+    rounded-lg
+   
+}
+
+.offerAmount{
+    @apply
+    text-white  text-lg sm:text-sm md:text-sm
+}

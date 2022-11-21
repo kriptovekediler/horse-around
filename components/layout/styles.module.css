@@ -1,0 +1,11 @@
+.layout{
+    @apply
+    relative
+    px-32 md:px-10
+   
+}
+.page{
+    @apply
+    pt-48 xl:pt-28 pb-20
+    
+}

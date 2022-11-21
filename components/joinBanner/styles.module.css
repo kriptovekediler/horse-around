@@ -1,0 +1,25 @@
+.banner{
+    @apply
+    mt-20
+    px-10 py-10 bg-bgJoin
+    text-white flex justify-between items-center flex-wrap
+}
+.text1{
+    @apply
+    text-xl font-semibold
+}
+.title{
+    @apply
+    text-[64px] font-PoppinsBold
+    text-white
+}
+.subTitle{
+    @apply
+    text-2xl font-PoppinsSemiBold
+}
+.joinButton{
+    @apply
+    bg-goldMetallic text-[#150E03] text-xl  px-10 py-4 rounded
+    transition hover:bg-black hover:text-goldMetallic
+    md:mt-10 
+}

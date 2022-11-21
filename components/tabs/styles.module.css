@@ -1,0 +1,19 @@
+.tabsHeader{
+    @apply
+    relative
+    w-full
+    border-b-2 border-white
+    flex mb-7 sm:flex-wrap md:flex-wrap 
+   
+}
+.tabItem{
+    @apply
+    px-10 inline-block sm:block sm:w-full sm:py-2 sm:px-0 md:p-10
+    text-xl font-semibold font-PoppinsSemiBold text-white pb-2 border-b-2 -mb-[2px]
+    cursor-pointer
+    transition
+}
+.active{
+    @apply
+    border-goldMetallic text-goldMetallic
+}

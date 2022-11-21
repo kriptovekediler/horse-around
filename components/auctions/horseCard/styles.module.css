@@ -1,0 +1,50 @@
+.contentBox{
+    @apply
+    font-bold
+    pb-32
+
+}
+.cardItem{
+    @apply
+    text-white
+    
+}
+.cardItemImageBox{ 
+    @apply
+   relative
+}
+.cardHorseInfo{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 71.31%, #000000 100%);
+    @apply
+    text-white top-0 absolute w-full h-full flex items-end pb-14 px-9
+}
+.horseName{
+    @apply
+    text-4xl text-white font-medium block
+}
+.horseInfo{
+    @apply
+    text-white text-xl font-semibold block
+}
+.horsePrice{
+    @apply
+    text-white opacity-[0.35] text-xl  xl:text-lg font-semibold block mt-3 xl:mt-2 lg:mt-1
+}
+.userInfo{
+    @apply
+    bg-[#25221F] px-4 py-4 rounded-b 
+}
+.userAvatar{
+    @apply
+    rounded  h-10 w-10
+}
+.cardPrice{
+    @apply
+    absolute
+    right-3
+    top-3
+    bg-goldMetallic
+    rounded-lg
+    text-base 2xl:text-xl
+    p-2
+}

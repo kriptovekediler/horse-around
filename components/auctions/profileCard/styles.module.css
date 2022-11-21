@@ -1,0 +1,51 @@
+.card{
+    @apply
+    relative
+    text-center 
+    bg-[#444444B2]
+    p-5  2xl:p-16 2xl:pb-4
+    rounded-lg
+}
+.avatarBox{
+    @apply
+    relative text-center
+    w-[136px] inline-block
+}
+.avatar{
+    @apply
+    rounded mb-6
+}
+.userName{
+    @apply
+    text-xl xl:text-base font-PoppinsSemiBold
+    mb-3 block
+    text-white
+}
+.userDesc{
+    @apply
+   block w-full
+    text-base xl:text-sm
+}
+
+.button{
+    @apply
+    h-12
+    w-full
+    text-center
+    text-xl
+    rounded-lg
+    mt-6
+}
+.base{
+    @apply
+    bg-goldMetallic
+    text-black
+
+
+}
+.dark{
+    @apply
+    bg-[#150E03]
+    text-white
+    
+}

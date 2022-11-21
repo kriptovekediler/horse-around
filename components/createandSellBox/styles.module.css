@@ -1,0 +1,29 @@
+.box{
+    @apply
+    px-32 py-28
+    bg-[#25221F]
+}
+.flexBox{
+    @apply
+    w-3/4 mx-auto flex items-center gap-16
+}
+.steps{
+    @apply
+    text-white
+    
+}
+.stepTitle{
+    @apply
+    text-5xl font-PoppinsSemiBold  mb-1
+    text-white
+}
+.stepDesc{
+    @apply
+    text-2xl block mb-5 mt-3
+}
+.button{
+    @apply
+    bg-goldMetallic text-[#150E03] text-xl  px-10 py-4 rounded
+    transition hover:bg-black hover:text-goldMetallic
+    mt-10 inline-block
+}

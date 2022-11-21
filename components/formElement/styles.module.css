@@ -1,0 +1,32 @@
+.input{
+    border: 1px solid #444444b3;
+    color: #ffffffb3;
+    @apply
+    w-full h-12 rounded
+    text-lg bg-transparent px-3
+}
+.label{
+    @apply
+    block mb-2 text-white text-xl 
+}
+.button{
+    @apply
+    bg-goldMetallic text-[#150E03] text-xl  px-10 py-4 rounded
+    transition hover:bg-black hover:text-goldMetallic
+    md:mt-10 
+}
+.darkButton{
+    background: linear-gradient(0deg, rgba(68, 68, 68, 0.7), rgba(68, 68, 68, 0.7)),
+linear-gradient(0deg, #444444, #444444);
+
+    @apply
+   text-white
+}
+
+.textarea{
+    border: 2px solid #444444b3;
+    color: #ffffffb3;
+    @apply
+    w-full h-32 rounded
+    text-lg bg-transparent px-3 
+}

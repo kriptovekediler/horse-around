@@ -1,0 +1,29 @@
+.box{
+    @apply
+    relative
+    bg-underConstruction bg-cover bg-left bg-no-repeat
+    h-screen
+    w-screen 
+   
+}
+.boxContent{
+    background: linear-gradient(180deg, #150E03 0%, rgba(21, 14, 3, 0) 99.84%);
+    @apply
+    h-full w-full flex items-center justify-center text-white
+}
+.title{
+    @apply
+    text-6xl leading-[96px] font-PoppinsBold
+    text-white
+}
+.subTitle{
+    @apply
+    text-4xl 
+    text-white
+}
+.button{
+    @apply
+    bg-goldMetallic text-white text-xl  px-20 py-2 rounded
+    transition hover:bg-black hover:text-goldMetallic
+    mt-10 inline-block
+}

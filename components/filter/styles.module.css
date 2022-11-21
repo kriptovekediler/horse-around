@@ -1,0 +1,26 @@
+.filterBox{
+        @apply
+        bg-[#444444] rounded-lg py-4  mb-10
+}
+.filterTitle{
+        @apply
+        text-xl font-PoppinsSemiBold
+}
+.filterItem{
+        @apply
+        flex items-center justify-between
+        w-full
+        p-4 text-white text-sm font-Nunito font-semibold
+        cursor-pointer 
+        /* border-white */ 
+}
+.content{
+        @apply
+        text-white  
+        px-4 pb-4
+}
+.filterButton{
+        @apply
+        text-white border border-white h-16 px-4 w-full rounded-lg
+        
+}

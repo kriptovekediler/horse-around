@@ -1,0 +1,57 @@
+.footer{
+    border-top:1px solid #ffffff1a;
+    @apply
+    px-32 pt-32 pb-16 
+   
+}
+.footerContent{
+    border-bottom: 2px solid #ffffff1a;
+    @apply
+    flex justify-between
+    pb-10 
+}
+.footerTitle{
+    
+    @apply
+    text-white text-xl font-semibold mb-3 block
+}
+.footerLink{
+    @apply 
+    transition
+    text-white text-lg font-light mb-[6px]
+    hover:text-goldMetallic
+     block
+}
+.emailBoxInput{
+    @apply
+    bg-[#444444] text-white h-[52px] w-[300px] px-2
+    placeholder:text-xl text-xl placeholder:text-white
+    rounded-l
+
+}
+.emailBoxButton{
+    @apply
+    transition
+    bg-goldMetallic text-white h-[52px] px-3 text-2xl font-bold 
+    hover:bg-black
+    rounded-r
+}
+.socialLink{
+    @apply
+    rounded transition
+    p-[7px] text-center leading-10 text-white text-2xl border
+    hover:border-goldMetallic hover:text-goldMetallic
+}
+.footerBottom{
+    @apply
+    pt-14 pb-16
+    flex items-center justify-between
+    text-white
+}
+.langButton{
+        @apply
+        flex gap-3 items-center
+        text-white border
+        h-11 px-3 cursor-pointer text-base
+        rounded
+}

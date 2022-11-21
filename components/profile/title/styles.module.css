@@ -1,0 +1,16 @@
+.titleBox{
+    @apply
+    w-full
+     mb-16 
+}
+
+.title{
+    @apply
+    text-5xl xl:text-3xl font-semibold text-white mb-1 
+}
+
+.light{
+    @apply
+    inline-block mb-4 xl:mb-1
+    w-16 h-[3px] bg-goldMetallic rounded
+}

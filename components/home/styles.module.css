@@ -1,0 +1,8 @@
+.home{
+    @apply
+    relative
+    bg-bgHorse bg-cover bg-left bg-no-repeat
+    h-screen
+    w-screen mb-28
+   
+}

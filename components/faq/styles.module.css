@@ -1,0 +1,23 @@
+.contentBox{
+    @apply
+    font-bold
+    pb-32
+
+}
+.details{
+    @apply
+    border-goldMetallic border-2
+    rounded-lg
+     mb-4 2xl:mb-8
+}
+.summary {
+    @apply 
+          font-semibold text-base 2xl:text-2xl
+
+          px-4 py-6 mt-4 text-white
+  }
+  .description {
+    @apply text-white  text-sm  2xl:text-base
+
+          p-4
+  }

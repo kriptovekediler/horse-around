@@ -1,0 +1,50 @@
+.box{
+    @apply
+    bg-dark30
+    py-10 px-10 sm:px-2 md:px-3
+    rounded-lg
+   
+}
+.title{
+    @apply 
+    flex w-full
+    justify-center
+    2xl:text-3xl text-lg
+    text-white
+    mb-6
+}
+.propertiesItem{
+    @apply
+    mb-2 
+    flex items-center justify-between sm:flex-wrap
+}
+.propertiesName{
+    @apply
+    2xl:text-lg text-base text-white
+}
+.propertiesValue{
+    @apply
+    2xl:text-lg text-base text-goldMetallic
+}
+
+.documentItems{
+    @apply
+    border-2 border-goldMetallic
+    rounded-md px-3 py-3
+    flex justify-between items-center 
+    mb-4
+}
+.documentName{
+    @apply
+    text-base 2xl:text-xl font-PoppinsSemiBold
+}
+.documentDate{
+    @apply
+    text-sm 2xl:text-lg 
+}
+.downloadButton{
+    @apply
+    h-11 border border-white px-3
+    rounded-3xl flex items-center gap-4 text-sm 2xl:text-lg
+    hover:border-goldMetallic hover:text-goldMetallic transition duration-500
+}

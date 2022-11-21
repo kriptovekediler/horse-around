@@ -1,0 +1,16 @@
+.box{
+    @apply
+    bg-dark30
+    py-11 px-10 sm:px-2 md:px-3
+    rounded-lg
+
+}
+.pedigreeBox{
+    @apply
+    flex
+}
+.badge{
+    @apply
+    bg-goldMetallic rounded text-xl md:text-base
+    h-10 px-3 pt-1
+}

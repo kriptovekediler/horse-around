@@ -1,0 +1,22 @@
+.head{
+    @apply
+    relative
+    bg-cover bg-left bg-no-repeat bg-profile
+    w-screen mb-5
+   
+}
+.headBox{
+    @apply
+    absolute
+    bottom-[40%] xl:bottom-[35%] left-0
+    text-white px-32
+}
+.title{
+    @apply
+    text-6xl xl:text-5xl lg:text-2xl font-PoppinsBold
+    text-white
+}
+.subTitle{
+    @apply
+    text-5xl  xl:text-3xl lg:text-xl
+}

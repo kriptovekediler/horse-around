@@ -1,0 +1,12 @@
+.uploadBox{
+    border: 2px solid rgba(68, 68, 68, 0.7);
+    @apply
+    relative
+    col-span-9 rounded-lg  
+    flex items-center justify-center
+    py-20 px-10 
+}
+.title{
+    @apply
+    text-base xl:text-sm mb-2 block
+}

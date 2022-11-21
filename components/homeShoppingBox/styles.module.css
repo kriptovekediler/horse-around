@@ -1,0 +1,28 @@
+.box{
+    @apply
+    px-32 py-28
+}
+.gridBox{
+    @apply
+    grid grid-cols-4  gap-4
+    xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1
+}
+.gridBoxInfo{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 71.31%, #000000 100%);
+    @apply
+    rounded-lg 
+    absolute top-0 left-0 w-full h-full
+    flex items-end pb-14 px-9
+   
+}
+.title{
+    @apply
+    text-white text-4xl
+    
+}
+.button{
+    @apply
+    bg-goldMetallic text-[#150E03] text-xl  px-10 py-4 rounded
+    transition hover:bg-black hover:text-goldMetallic
+    md:mt-10 
+}

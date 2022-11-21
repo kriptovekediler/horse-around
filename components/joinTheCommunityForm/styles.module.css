@@ -1,0 +1,16 @@
+.contentBox{
+    @apply
+    bg-[#25221F]
+    pb-32 px-32  py-28
+}
+.gridBox{
+    @apply
+    grid grid-cols-2 gap-4
+    w-3/4 mx-auto
+}
+.button{
+    @apply
+    bg-goldMetallic text-[#150E03] text-xl  px-10 py-4 rounded
+    transition hover:bg-black hover:text-goldMetallic
+    
+}

@@ -1,0 +1,23 @@
+.navBox{
+    @apply
+    relative flex flex-wrap bg-[#444444] rounded-lg py-12 xl:py-8
+   text-white
+}
+.userBox{
+    border-right: 2px solid #ffffff1a;
+    @apply
+    border-r-2 border-[#ffffff1a]
+    px-16 xl:px-10 py-5 sm:w-full w-[400px] lg:w-full md:w-full  lg:border-r-0 lg:border-b-2  lg:mb-10
+}
+.auctionsBox{
+    @apply
+    px-4
+    flex items-center justify-between flex-wrap w-2/4 lg:w-full md:w-full md:justify-center md:text-center  mx-auto
+    text-3xl xl:text-lg
+}
+.button{
+    @apply
+    bg-goldMetallic text-black text-lg  px-14 py-1 rounded
+    transition hover:bg-black hover:text-goldMetallic
+    inline-block md:mt-4
+}

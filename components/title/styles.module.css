@@ -1,0 +1,31 @@
+.titleBox{
+    @apply
+    flex w-[64%] mx-auto
+    items-center justify-center text-center mb-16
+}
+.titleActionBox{
+    @apply
+    w-full justify-between text-left
+}
+.actionButton{
+    @apply
+    border text-white text-lg rounded-3xl
+    px-5 py-3
+    flex items-center gap-2
+    hover:border-goldMetallic transition duration-500
+    hover:text-goldMetallic
+}
+.title{
+    @apply
+    text-5xl font-semibold text-white mb-1 
+}
+.subTitle{
+    
+    @apply
+    text-2xl font-light text-white
+}
+.light{
+    @apply
+    inline-block mb-4
+    w-16 h-[3px] bg-goldMetallic rounded
+}

@@ -1,0 +1,52 @@
+.box{
+    @apply
+    px-32 py-28
+}
+.cardImage{
+    @apply
+    h-52 2xl:h-80 rounded-tr-lg 
+     bg-cover
+}
+.gridBox{
+    @apply
+    grid grid-cols-3  gap-4
+    xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1
+}
+.gridBoxContainer{
+    background: rgba(68, 68, 68, 0.3);
+    @apply
+    rounded-br-lg
+    mb-10
+}
+.gridBoxInfo{
+    @apply
+    w-full
+    px-5 2xl:px-8 py-3 2xl:py-5 
+}
+.date{
+    color: rgba(255, 255, 255, 0.7);
+    @apply
+    text-sm 2xl:text-base
+}
+.title{
+    @apply
+    text-white text-base 2xl:text-xl font-PoppinsSemiBold my-3
+}
+.description{
+    @apply
+    text-white text-sm 2xl:text-base
+}
+.userBox{
+    @apply
+    px-5 2xl:px-8 py-3 2xl:py-5 border-t border-[#FFFFFF1A]
+}
+.userInfo{
+    @apply
+    flex gap-4 text-white items-center
+    text-lg 
+
+}
+.userAvatar{
+    @apply
+    rounded-full   h-10 w-10
+}
