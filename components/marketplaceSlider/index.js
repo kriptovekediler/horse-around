@@ -58,7 +58,7 @@ useEffect(() => {
         {...settings}
         className="marketplace-slider mt-20 -ml-10 sm:ml-0 "
       >
-        {sellingHorses.map((item, index) => (
+        {sellingHorses.reverse().map((item, index) => (
           <SliderCard key={index} horse={item} /> 
         ))}
         </Slider>

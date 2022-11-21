@@ -4,18 +4,29 @@ import Image from "next/image";
 import horse from "../../public/horse/horse1.png";
 import styles from "./styles.module.css";
 import { useWeb3 } from "../web3/providers";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CardItem({ horse }) {
   const { web3 } = useWeb3();
 
+  const placeholderImage =
+  'https://media.istockphoto.com/id/521697371/photo/brown-pedigree-horse.jpg?s=612x612&w=0&k=20&c=x19W0K7iuQhQn_7l3wRqWq-zsbo0oRA33C3OF4nooL0='
+
+const onImageError = (e) => {
+  e.target.src = placeholderImage
+}
+const [img,setImg]=useState("")
+const [placeholder,setPlacceholder]=useState("")
+useEffect(()=>{
+  setImg(horse?.image)
+},[horse])
   return (
     <div>
       <div className={styles.cardItem}>
       <Link href={`/detail/${horse?.horseId}`}>
         <a target={'_blank'}>
         <div className={styles.cardItemImageBox}>
-          <img src={horse?.image} width="100%"/>
+          <img src={img ? img : placeholderImage} width="100%" style={{height:"300px"}}    onError={()=>setImg("https://media.istockphoto.com/id/521697371/photo/brown-pedigree-horse.jpg?s=612x612&w=0&k=20&c=x19W0K7iuQhQn_7l3wRqWq-zsbo0oRA33C3OF4nooL0=")}/>
           <div className={styles.cardHorseInfo}>
             <div>
               <h3 className={styles.horseName}>{horse?.horseName}</h3>
