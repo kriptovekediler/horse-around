@@ -225,9 +225,7 @@ export default function SharesOnSale({ horse }) {
         columns={columns}
         dataSource={data}
         pagination={false}
-        scroll={{
-          y: 800,
-        }}
+    
       />
     </div>
   );
