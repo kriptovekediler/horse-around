@@ -18,9 +18,7 @@ export default function CardItem({ number, horse }) {
 const placeholderImage =
 'https://media.istockphoto.com/id/521697371/photo/brown-pedigree-horse.jpg?s=612x612&w=0&k=20&c=x19W0K7iuQhQn_7l3wRqWq-zsbo0oRA33C3OF4nooL0='
 
-const onImageError = (e) => {
-e.target.src = placeholderImage
-}
+
 const [img,setImg]=useState("")
 const [placeholder,setPlacceholder]=useState("")
 useEffect(()=>{
