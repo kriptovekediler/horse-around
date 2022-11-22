@@ -63,7 +63,7 @@ export default function MarketPlace({ horses }) {
                       if (value?.status) {
                         return (
                           <Link href={`/detail/${value.horseId}`}>
-                            
+                            <a>
                               <HorseCard
                                 name={value?.horseName}
                                 image={value?.image}
@@ -76,7 +76,7 @@ export default function MarketPlace({ horses }) {
                                 id={value?.id}
                                 key={key}
                               />
-                          
+                          </a>
                           </Link>
                         );
                       }

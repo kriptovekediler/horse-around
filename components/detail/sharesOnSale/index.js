@@ -208,6 +208,8 @@ export default function SharesOnSale({ horse }) {
       price: `${
         web3?.utils?.fromWei(horse?.saleInfo[0]?.price, "ether") * 1500
       } $ OR ${web3?.utils?.fromWei(horse?.saleInfo[0]?.price, "ether")} ETH`,
+     
+
       actionButton: {
         id: i,
         saleInfo: horse?.saleInfo[0],
