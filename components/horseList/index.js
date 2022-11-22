@@ -18,7 +18,7 @@ export default function HorseList({ horses, count }) {
   return (
     <div className="grid grid-cols-12 gap-4 mb-6">
       <div className="col-span-5 flex flex-wrap items-center gap-4">
-        <img src="https://picsum.photos/120/120" className="rounded-lg" />
+        <img src="https://picsum.photos/120/120" className="rounded-lg"  />
         <div>
           <div>
             <span className={styles.horseName}>@FormUSA</span>
@@ -41,7 +41,7 @@ export default function HorseList({ horses, count }) {
                   comment: "comment-1", // this is the comment
                 }}
               >
-                <a>
+         
                   <img
                     key={key}
                     src={
@@ -49,12 +49,12 @@ export default function HorseList({ horses, count }) {
                         ? value.image
                         : "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg"
                     }
-                    width={180}
-                    height={120}
+     
+                    style={{width:"180px",height:"120px"}}
                     objectFit="cover"
                     className="rounded-lg h-full"
                   />
-                </a>
+              
               </Link>
             );
           }
