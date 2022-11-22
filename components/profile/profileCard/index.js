@@ -15,7 +15,7 @@ export default function ProfileCard() {
     if (account?.data) {
       axios
         .post(
-          "https://horse-around-backend.herokuapp.com/get_user", {
+          "https://horse-around-app.herokuapp.com/get_user", {
             publicAddress: account?.data,
           }
         )
