@@ -13,7 +13,7 @@ export default function MyAuctions( { account, horses } ) {
   const router = useRouter();
 
   useEffect(() => {
-    axios.post("https://horse-around-backend.herokuapp.com/get_user", {
+    axios.post("https://horse-around-app.herokuapp.com/get_user", {
       publicAddress: account,
     })
     .then((res) => {
@@ -27,7 +27,7 @@ export default function MyAuctions( { account, horses } ) {
 
   const claim = async (e,bid) => {
     e.preventDefault();
-    await axios.post("https://horse-around-backend.herokuapp.com/get_horse", {
+    await axios.post("https://horse-around-app.herokuapp.com/get_horse", {
       horseId: bid.horseId  
   }).then((res) => {
     if(res.data.detail.horse.auctionInfo[bid.auctionId].highestBidder === account){
@@ -39,7 +39,7 @@ export default function MyAuctions( { account, horses } ) {
       }).then(
         (res) => {
           console.log("contract res:",res)
-          axios.post("https://horse-around-backend.herokuapp.com/cancel_a_bid", {
+          axios.post("https://horse-around-app.herokuapp.com/cancel_a_bid", {
             publicAddress: account,
             horseId: bid?.horseId,  
             token: getCookie("access_token")
@@ -61,7 +61,7 @@ export default function MyAuctions( { account, horses } ) {
     }).then(
       (res) => {
         console.log("contract res:",res)
-        axios.post("https://horse-around-backend.herokuapp.com/end_auction", {
+        axios.post("https://horse-around-app.herokuapp.com/end_auction", {
           buyer: account,
           seller: bid.sellerAddress,
           horseId: bid.horseId,
