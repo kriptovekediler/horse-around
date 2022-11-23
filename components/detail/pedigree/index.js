@@ -13,7 +13,7 @@ export default function Pedigree( {horse} ) {
           <div className={styles.pedigreeBox}>
             <div className="bg-[#39250B] border-goldMetallic w-[78px] border-2 rounded-lg flex items-center">
               <span className="-rotate-90 text-base 2xl:text-2xl">
-                Pedigree
+              {horse.horseName}
               </span>
             </div>
             <div className="flex flex-wrap w-full gap-0">
@@ -30,7 +30,7 @@ export default function Pedigree( {horse} ) {
                   </div>
                 </div>
                 <div className="">
-                  <div className="flex items-center justify-center border-goldMetallic border-t-2 border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  <div className="flex items-center justify-center border-goldMetallic border-t-2 border-b-2  p-4 2xl:px-8">
                   {horse.fourth}
                   </div>
                   <div className="flex items-center justify-center border-goldMetallic text-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
