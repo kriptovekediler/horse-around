@@ -14,10 +14,7 @@ export default function Properties({ horse }) {
                 {horse.breederName}
               </span>
             </div>
-            <div className={styles.propertiesItem}>
-              <span className={styles.propertiesName}>Jockey Name</span>
-              <span className={styles.propertiesValue}>{horse.jockeyName}</span>
-            </div>
+          
             <div className={styles.propertiesItem}>
               <span className={styles.propertiesName}>Sire Name</span>
               <span className={styles.propertiesValue}>{horse.sireName}</span>
