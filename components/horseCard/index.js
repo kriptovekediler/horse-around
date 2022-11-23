@@ -11,6 +11,7 @@ export default function CardItem({
   image,
   ownerName,
   ownerAddress,
+  horseId
 }) {
   const { web3 } = useWeb3();
   const placeholderImage =
@@ -26,7 +27,7 @@ useEffect(()=>{
 },[horse])
 
   return (
-    <div>
+    <Link href={`/detail/${horseId}`}>
       <div className={styles.cardItem}>
         <a>
           <div className={styles.cardItemImageBox}>
@@ -53,6 +54,6 @@ useEffect(()=>{
           </Link>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

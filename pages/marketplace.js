@@ -58,17 +58,17 @@ export default function MarketPlace({ horses }) {
               {activeTab === "Horse" && (
                 <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-4 mt-10">
                   {Object.entries(horses)
-                    .slice(5)
+                    .slice(0)
                     .map(([key, value]) => {
                       if (value?.status) {
                         return (
-                          <Link href={`/detail/${value.horseId}`}>
-                            <a>
+                        
                               <HorseCard
                                 name={value?.horseName}
                                 image={value?.image}
                                 ownerName={value?.ownerName}
                                 ownerAddress={value?.publicAddress}
+                                horseId={value?.horseId}
                                 // price={
                                 //   value.saleInfo[value?.saleInfo?.length - 1]
                                 //     ?.price
@@ -76,8 +76,8 @@ export default function MarketPlace({ horses }) {
                                 id={value?.id}
                                 key={key}
                               />
-                          </a>
-                          </Link>
+                          
+                     
                         );
                       }
                     })}
