@@ -18,56 +18,56 @@ export default function Pedigree( {horse} ) {
             </div>
             <div className="flex flex-wrap w-full gap-0">
               <div className="flex w-full">
-                <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-b  px-10 2xl:px-10">
-                  Diesel Decay (1998){" "}
+                <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-b  px-10 2xl:px-10" style={{width:"150px"}}>
+                  {horse.first}
                 </div>
                 <div className="border-t-2 border-b-2 rounded-l-lg border-goldMetallic">
-                  <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
+                  {horse.second}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2">
-                    Cardiac(2005)
+                  <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
+                  {horse.thirth}- 
                   </div>
                 </div>
                 <div className="">
-                  <div className="flex items-center justify-center border-goldMetallic border-t-2 border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic border-t-2 border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  {horse.fourth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic text-goldMetallic border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic text-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  {horse.fifth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  {horse.sixth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  {horse.seventh}
                   </div>
                 </div>
               </div>
               <div className="flex w-full">
-                <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-t  px-10 2xl:px-10">
-                  Diesel Decay (1998){" "}
+                <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-t  px-10 2xl:px-10" style={{width:"150px"}}>
+                {horse.eighth}
                 </div>
                 <div className="border-t border-b-2 rounded-l-lg border-goldMetallic">
-                  <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
+                  {horse.ninth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2">
-                    Cardiac(2005)
+                  <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
+                  {horse.tenth}
                   </div>
                 </div>
                 <div className="">
-                  <div className="flex items-center justify-center border-goldMetallic border-t border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic border-t border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  {horse.eleventh}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                    {horse.twelfth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                    {horse.thirteenth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
-                    Fire(2007)
+                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  {horse.fourteenth}
                   </div>
                 </div>
               </div>
@@ -108,9 +108,7 @@ export default function Pedigree( {horse} ) {
                   )}
                 </Space>
               </Space>
-              <p className="text-sm 2xl:text-xl mt-2">
-                {horse.preferenceDescription}
-              </p>
+           
               <div className="text-end mt-2 w-full">
                 <Link href="">
                   <a>

@@ -8,3 +8,18 @@
 .title {
   @apply text-base xl:text-sm mb-2 block;
 }
+
+.box{
+  @apply
+ w-full
+}
+.pedigreeBox{
+  @apply
+  flex
+  w-full
+}
+.badge{
+  @apply
+  bg-goldMetallic rounded text-xl md:text-base
+  h-10 px-3 pt-1
+}

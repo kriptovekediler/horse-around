@@ -31,6 +31,11 @@ export default function Create({ user }) {
 
   // let imageUrl = imageSrc;
   const options = useMemo(() => countryList().getData(), []);
+  const pedigreeOptions = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
 
   useEffect(() => {
     console.log(user);
@@ -48,7 +53,6 @@ export default function Create({ user }) {
     sex: "",
     country: "",
     breederName: "",
-    jockeyName: "",
     sireName: "",
     damName: "",
     damSiblingsName: "",
@@ -61,6 +65,20 @@ export default function Create({ user }) {
     sponsorshipEarnings: "",
     overseasBonus: "",
     preferenceDescription: "",
+    first:"",
+    second:"",
+    third:"",
+    fourth:"",
+    fifth:"",
+    sixth:"",
+    seventh:"",
+    eighth:"",
+    ninth:"",
+    tenth:"",
+    eleventh:"",
+    twelfth:"",
+    thirteenth:"",
+    fourteenth:""
   });
   /*   useEffect(() => {
     contractNFT?.methods.name().call({
@@ -354,6 +372,7 @@ export default function Create({ user }) {
                       onChange={changeHandler}
                     />
                   </div>
+
                   <div className="col-span-4">
                     <Input
                       text="Owner Name"
@@ -375,16 +394,7 @@ export default function Create({ user }) {
                       }
                     />
                   </div>
-                  <div className="col-span-4">
-                    <Input
-                      text="Jockey Name"
-                      placeholder="Willhemm"
-                      value={horse.jockeyName}
-                      onChange={(e) =>
-                        setHorse({ ...horse, jockeyName: e.target.value })
-                      }
-                    />
-                  </div>
+              
                   <div className="col-span-4">
                     <Input
                       text="Sire Name"
@@ -513,7 +523,178 @@ export default function Create({ user }) {
               ) : (
                 <>
                   <div className="col-span-12">
-                    <Pedigree horseName={horse?.horseName} />
+                   
+
+
+
+                  <div className={styles.box}>
+                    <div className={styles.pedigreeBox}>
+                      <div className="bg-[#39250B] border-goldMetallic w-[78px] border-2 rounded-lg flex items-center">
+                        <span className="-rotate-90 text-base 2xl:text-2xl">{horse?.horseName}</span>
+                      </div>
+                      <div className="flex flex-wrap w-full gap-0">
+                        <div className="flex w-full">
+                          <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-b  px-10 2xl:px-10">
+                            {/* <SelectBox placeholder="Select Country" options={pedigreeOptions}   value={horse.first.label} onChange={changeHandler}/> */}
+                            <Input
+                              text="Pedigree"
+                              placeholder="First"
+                              value={horse.first}
+                              onChange={(e) =>
+                                setHorse({ ...horse, first: e.target.value })
+                              }
+                            />
+                          </div>
+
+                          <div className="border-t-2 border-b-2 rounded-l-lg border-goldMetallic">
+                            <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2">
+                            {/* <SelectBox placeholder="Select Country" options={pedigreeOptions}   value={horse.second.label} onChange={changeHandler}/> */}
+                            <Input
+                              text="Pedigree"
+                              placeholder="Second"
+                              value={horse.second}
+                              onChange={(e) =>
+                                setHorse({ ...horse, second: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Third"
+                              value={horse.third}
+                              onChange={(e) =>
+                                setHorse({ ...horse, third: e.target.value })
+                              }
+                            />
+                            </div>
+                          </div>
+                          <div className="">
+                            <div className="flex items-center justify-center border-goldMetallic border-t-2 border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Fourth"
+                              value={horse.fourth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, fourth: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic text-goldMetallic border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Fifth"
+                              value={horse.fifth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, fifth: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Sixth"
+                              value={horse.sixth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, sixth: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Seventh"
+                              value={horse.seventh}
+                              onChange={(e) =>
+                                setHorse({ ...horse, seventh: e.target.value })
+                              }
+                            />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex w-full">
+                          <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-t  px-10 2xl:px-10">
+                          <Input
+                              text="Pedigree"
+                              placeholder="Eighth"
+                              value={horse.eighth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, eighth: e.target.value })
+                              }
+                            />
+                          </div>
+                          <div className="border-t border-b-2 rounded-l-lg border-goldMetallic">
+                            <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Ninth"
+                              value={horse.ninth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, ninth: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Tenth"
+                              value={horse.tenth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, tenth: e.target.value })
+                              }
+                            />
+                            </div>
+                          </div>
+                          <div className="">
+                            <div className="flex items-center justify-center border-goldMetallic border-t border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Eleventh"
+                              value={horse.eleventh}
+                              onChange={(e) =>
+                                setHorse({ ...horse, eleventh: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Twelfth"
+                              value={horse.twelfth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, twelfth: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Thirteenth"
+                              value={horse.thirteenth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, thirteenth: e.target.value })
+                              }
+                            />
+                            </div>
+                            <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8">
+                            <Input
+                              text="Pedigree"
+                              placeholder="Fourteenth"
+                              value={horse.fourteenth}
+                              onChange={(e) =>
+                                setHorse({ ...horse, fourteenth: e.target.value })
+                              }
+                            />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
                   </div>
                   <div className="flex flex-row col-span-12 justify-end mr-12 mt-5 text-end gap-10">
                     <Button className="" onClick={(e) => setStep(0)}>
