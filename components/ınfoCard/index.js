@@ -230,8 +230,10 @@ export default function InfoCard({ horse, saleInfo }) {
           <span>P/S {state}</span>
         </div>
       </div>
-
-      <div className={styles.description}>{horse?.preferenceDescription}</div>
+      <Link href={horse?.preferenceDescription}>
+        <div className={styles.description}>{horse?.preferenceDescription}</div>
+      </Link>
+      
       <div className="mb-10">
         <div className={styles.infoItem}>
           <span>Age</span>

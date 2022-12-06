@@ -20,6 +20,10 @@
     text-xl md:text-base 
     mb-12 mt-4
 }
+
+.description:hover{
+    text-decoration: underline;
+}
 .infoItem{
     @apply
     flex items-center justify-between gap-2 
