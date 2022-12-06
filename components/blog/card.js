@@ -5,12 +5,13 @@ import Title from "../title";
 import { MdMessage, MdOutlineFavorite } from "react-icons/md";
 import styles from "./styles.module.css";
 
-export default function BlogBox() {
+export default function BlogBox({id,author,blogName,blogImage,blogContent,date}) {
   return (
+    <Link href={`/blogs/${id}`}>
     <div className="relative block">
         <div
           className={styles.cardImage}
-          style={{ backgroundImage: `url('https://i.pravatar.cc/300')` }}
+          style={{ backgroundImage: `url(${blogImage})` }}
         >
         <Link href="">
           <a className="">
@@ -21,12 +22,9 @@ export default function BlogBox() {
         <div className={styles.gridBoxContainer}>
           <div className={styles.gridBoxInfo}>
             <span className={styles.date}>Category - 20 JUL. 2022</span>
-            <h3 className={styles.title}>Clothing And Equipment</h3>
+            <h3 className={styles.title}>{blogName}</h3>
             <p className={styles.description}>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more or less normal
-              distribution.
+              {blogContent.slice(0,240) + "..."}
             </p>
           </div>
           <div className={styles.userBox}>
@@ -37,7 +35,7 @@ export default function BlogBox() {
                   className={styles.userAvatar}
                 />
                 <Link href={`/profile/`}>
-                  @wow
+                  <h3 className={styles['author']}>@{author}</h3>
                 </Link>
               </div>
               <div className="flex gap-4 text-lg">
@@ -52,5 +50,6 @@ export default function BlogBox() {
           </div>
         </div>
         </div>
+        </Link>
   );
 }

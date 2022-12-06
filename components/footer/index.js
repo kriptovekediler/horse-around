@@ -11,6 +11,10 @@ import {
 import styles from "./styles.module.css";
 
 export default function Footer() {
+  const handleSubmit = (e) => {
+    alert('A name was submitted: ');
+    e.preventDefault();
+  }
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
@@ -42,12 +46,15 @@ export default function Footer() {
         </div>
         <div className={styles.emailBox}>
           <span className={styles.footerTitle}>Keep in touch</span>
-          <div className="flex">
-            <input placeholder="Your email" className={styles.emailBoxInput} />
-            <button className={styles.emailBoxButton}>
-              <FaAngleRight />
-            </button>
-          </div>
+         
+            <form className="flex" onSubmit={handleSubmit}>
+              <input placeholder="Your email" className={styles.emailBoxInput} type="email" />
+              <button className={styles.emailBoxButton}>
+                <FaAngleRight />
+              </button>
+            </form>
+           
+        
         </div>
       </div>
       <div className={styles.footerBottom}>
