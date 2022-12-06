@@ -3,16 +3,46 @@ import { Space } from "antd";
 import { BsFillShareFill } from "react-icons/bs";
 import styles from "./styles.module.css";
 import { useWeb3 } from "../../web3/providers/";
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  InstapaperIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
+
+import {
+  FacebookShareCount,
+  HatenaShareCount,
+  OKShareCount,
+  PinterestShareCount,
+  RedditShareCount,
+  TumblrShareCount,
+  VKShareCount,
+  WhatsappShareButton
+} from "react-share";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 export default function Pedigree( {horse} ) {
+  const {query} = useRouter();
+
+//   if (typeof window !== 'undefined') {
+//     setShareUrl(window.location.hostname)
+//  }
+
   const { web3 } = useWeb3();
   return (
     <div className={styles.box}>
       <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-10 md:gap-10 sm:gap-0 text-white mb-10">
         <div className="border-r-2 mr-10 border-[#FFFFFF1A] pr-10 md:pr-0 sm:pr-0 md:border-0 sm:border-0">
           <div className={styles.pedigreeBox}>
-            <div className="bg-[#39250B] border-goldMetallic w-[78px] border-2 rounded-lg flex items-center">
-              <span className="-rotate-90 text-base 2xl:text-2xl">
+            <div className="bg-[#39250B] border-goldMetallic w-[78px] border-2 rounded-lg flex items-center justify-center">
+              <span className="-rotate-90 text-base 2xl:text-2xl ">
               {horse.horseName}
               </span>
             </div>
@@ -82,10 +112,10 @@ export default function Pedigree( {horse} ) {
             />
             <div>
               <Space className="w-full items-center justify-between mb-4">
-                <h2 className="text-5xl 2xl:text-7xl text-white font-PoppinsSemiBold">
+                <h2 className="text-4xl text-white font-PoppinsSemiBold">
                   {horse.horseName}
                 </h2>
-                <span className="text-goldMetallic text-3xl 2xl:text-6xl">
+                <span className="text-goldMetallic text-2xl">
                   ID {horse.horseId}
                 </span>
               </Space>
@@ -109,13 +139,40 @@ export default function Pedigree( {horse} ) {
                 </Space>
               </Space>
            
-              <div className="text-end mt-2 w-full">
-                <Link href="">
-                  <a>
-                    <BsFillShareFill className="text-xl inline-block" />
-                  </a>
-                </Link>
+              <div className="text-end mt-2 w-full flex flex-col  right-0 float-right  ">
+          
+                <BsFillShareFill className="text-xl" />
+           
+                <FacebookShareButton
+                  url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
+                  quote={"フェイスブックはタイトルが付けれるようです"}
+                  hashtag={"#hashtag"}
+                  description={"aiueo"}
+                  className="Demo__some-network__share-button"
+                  >
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                
+                <TwitterShareButton
+                  title={"test"}
+                  url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
+                  hashtags={["hashtag1", "hashtag2"]}
+                  >
+                  <TwitterIcon size={32} round />
+                </TwitterShareButton>
+
+                <WhatsappShareButton
+                  title={"test"}
+                  url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
+                  hashtags={["hashtag1", "hashtag2"]}
+                  >
+                  <WhatsappIcon size={32} round />
+                </WhatsappShareButton>
               </div>
+          
+              
+         
+              
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
   FaAngleRight,
   FaDiscord,
@@ -9,12 +10,34 @@ import {
 } from "react-icons/fa";
 
 import styles from "./styles.module.css";
+import { useAccount } from "../web3/hooks";
+import { deleteCookie, getCookie } from 'cookies-next';
 
 export default function Footer() {
+  const [alert,setAlert] = useState(true)
+  
   const handleSubmit = (e) => {
-    alert('A name was submitted: ');
+    setAlert(false)
     e.preventDefault();
   }
+
+  const { account } = useAccount();
+const [connectionStatus, setConnectionStatus] = useState(undefined);
+
+  useEffect(() => {
+    if(account.data){
+      setConnectionStatus(true);
+    } 
+  }, [account.data]);
+
+  const walletConnection = () => {
+    if(account.data){
+      setConnectionStatus(!connectionStatus)
+      deleteCookie('access_token')
+      window.location.href = "/connectwallet"
+    }
+  }
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
@@ -33,9 +56,13 @@ export default function Footer() {
           </div>
           <div>
             <span className={styles.footerTitle}>Useful Links</span>
+            {account.data && connectionStatus ?  
+              <a className={styles.footerLink} onClick={walletConnection} >Disconnect</a>
+            :
             <Link href="/connectwallet">
               <a className={styles.footerLink}>Connect Wallet</a>
-            </Link>
+          </Link> 
+          }
             <Link href="/faq">
               <a className={styles.footerLink}>Faq</a>
             </Link>
@@ -46,14 +73,20 @@ export default function Footer() {
         </div>
         <div className={styles.emailBox}>
           <span className={styles.footerTitle}>Keep in touch</span>
-         
+            {alert ? 
             <form className="flex" onSubmit={handleSubmit}>
               <input placeholder="Your email" className={styles.emailBoxInput} type="email" />
               <button className={styles.emailBoxButton}>
                 <FaAngleRight />
               </button>
             </form>
-           
+            :
+            <div className="text-white">
+              ✔ Thank you for submitting
+            </div> 
+          
+          
+          }
         
         </div>
       </div>
@@ -65,7 +98,7 @@ export default function Footer() {
         <span className="text-lg">
           Terms and conditions | © 2022 HorsingAround
         </span>
-      </div>
+      </div> 
     </footer>
   );
 }
