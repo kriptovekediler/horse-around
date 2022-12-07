@@ -22,18 +22,19 @@ import {
   RedditShareCount,
   TumblrShareCount,
   VKShareCount,
-  WhatsappShareButton
+  WhatsappShareButton,
 } from "react-share";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 
-export default function Pedigree( {horse} ) {
-  const {query} = useRouter();
+export default function Pedigree({ horse }) {
+  const { query } = useRouter();
+  const [show,setShow]=useState(false)
 
-//   if (typeof window !== 'undefined') {
-//     setShareUrl(window.location.hostname)
-//  }
+  //   if (typeof window !== 'undefined') {
+  //     setShareUrl(window.location.hostname)
+  //  }
 
   const { web3 } = useWeb3();
   return (
@@ -43,61 +44,100 @@ export default function Pedigree( {horse} ) {
           <div className={styles.pedigreeBox}>
             <div className="bg-[#39250B] border-goldMetallic w-[78px] border-2 rounded-lg flex items-center justify-center">
               <span className="-rotate-90 text-base 2xl:text-2xl ">
-              {horse.horseName}
+                {horse.horseName}
               </span>
             </div>
             <div className="flex flex-wrap w-full gap-0">
               <div className="flex w-full">
-                <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-b  px-10 2xl:px-10" style={{width:"150px"}}>
+                <div
+                  className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-b  px-10 2xl:px-10"
+                  style={{ width: "150px" }}
+                >
                   {horse.first}
                 </div>
                 <div className="border-t-2 border-b-2 rounded-l-lg border-goldMetallic">
-                  <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
-                  {horse.second}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2"
+                    style={{ width: "150px" }}
+                  >
+                    {horse.second}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
-                  {horse.thirth}- 
+                  <div
+                    className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2"
+                    style={{ width: "150px" }}
+                  >
+                    {horse.thirth}-
                   </div>
                 </div>
                 <div className="">
                   <div className="flex items-center justify-center border-goldMetallic border-t-2 border-b-2  p-4 2xl:px-8">
-                  {horse.fourth}
+                    {horse.fourth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic text-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
-                  {horse.fifth}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic text-goldMetallic border-b-2  p-4 2xl:px-8"
+                    style={{ width: "250px" }}
+                  >
+                    {horse.fifth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
-                  {horse.sixth}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8"
+                    style={{ width: "250px" }}
+                  >
+                    {horse.sixth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
-                  {horse.seventh}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8"
+                    style={{ width: "250px" }}
+                  >
+                    {horse.seventh}
                   </div>
                 </div>
               </div>
               <div className="flex w-full">
-                <div className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-t  px-10 2xl:px-10" style={{width:"150px"}}>
-                {horse.eighth}
+                <div
+                  className="flex items-center justify-center border-goldMetallic rounded-lg border-2 border-t  px-10 2xl:px-10"
+                  style={{ width: "150px" }}
+                >
+                  {horse.eighth}
                 </div>
                 <div className="border-t border-b-2 rounded-l-lg border-goldMetallic">
-                  <div className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
-                  {horse.ninth}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic rounded-t-lg border-2 border-t-0 border-b p-5 2xl:px-10 h-1/2"
+                    style={{ width: "150px" }}
+                  >
+                    {horse.ninth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2" style={{width:"150px"}}>
-                  {horse.tenth}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic rounded-b-lg border-2 border-b-0 border-t p-5 2xl:px-10 h-1/2"
+                    style={{ width: "150px" }}
+                  >
+                    {horse.tenth}
                   </div>
                 </div>
                 <div className="">
-                  <div className="flex items-center justify-center border-goldMetallic border-t border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
-                  {horse.eleventh}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic border-t border-b-2  p-4 2xl:px-8"
+                    style={{ width: "250px" }}
+                  >
+                    {horse.eleventh}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  <div
+                    className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8"
+                    style={{ width: "250px" }}
+                  >
                     {horse.twelfth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
+                  <div
+                    className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8"
+                    style={{ width: "250px" }}
+                  >
                     {horse.thirteenth}
                   </div>
-                  <div className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8" style={{width:"250px"}}>
-                  {horse.fourteenth}
+                  <div
+                    className="flex items-center justify-center border-goldMetallic border-b-2  p-4 2xl:px-8"
+                    style={{ width: "250px" }}
+                  >
+                    {horse.fourteenth}
                   </div>
                 </div>
               </div>
@@ -119,8 +159,9 @@ export default function Pedigree( {horse} ) {
                   ID {horse.horseId}
                 </span>
               </Space>
-              <Space className="w-full justify-between">
-                <Space className="gap-2">
+
+              <Space className="w-full justify-between items-start">
+                <Space className="gap-2 flex">
                   <img
                     src="https://i.pravatar.cc/40"
                     className="h-11 rounded-lg"
@@ -129,50 +170,57 @@ export default function Pedigree( {horse} ) {
                     <span className="text-base 2xl:text-xl">{`@${horse.ownerName}`}</span>
                   </a>
                 </Space>
+
+               
+                <div className="text-end mt-2 w-full flex flex-col  right-0 float-right  items-center">
+                  <BsFillShareFill className="text-xl cursor-pointer mb-2" onClick={()=>setShow(prev=>!prev)}/>
+                  {show &&
+                  <>
+                  <FacebookShareButton
+                    url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
+                    quote={"フェイスブックはタイトルが付けれるようです"}
+                    hashtag={"#hashtag"}
+                    description={"aiueo"}
+                    className="Demo__some-network__share-button mb-2"
+                  >
+                    <FacebookIcon size={32} round />
+                  </FacebookShareButton>
+
+                  <TwitterShareButton
+                    title={"test"}
+                    url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
+                    hashtags={["hashtag1", "hashtag2"]}
+                    className="mb-2"
+                  >
+                    <TwitterIcon size={32} round />
+                  </TwitterShareButton>
+
+                  <WhatsappShareButton
+                    title={"test"}
+                    url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
+                    hashtags={["hashtag1", "hashtag2"]}
+                    className="mb-2"
+                  >
+                    <WhatsappIcon size={32} round />
+                  </WhatsappShareButton>
+                  </>
+                   }
+                </div>
+
+               
+
                 <Space>
                   {horse?.saleInfo.price && (
-                      <>
-                      <span className={styles.badge}>{web3?.utils?.fromWei(horse.saleInfo.price,'ether')} ETH</span>
+                    <>
+                      <span className={styles.badge}>
+                        {web3?.utils?.fromWei(horse.saleInfo.price, "ether")}{" "}
+                        ETH
+                      </span>
                       <span>or 5564 $</span>
-                      </>
+                    </>
                   )}
                 </Space>
               </Space>
-           
-              <div className="text-end mt-2 w-full flex flex-col  right-0 float-right  ">
-          
-                <BsFillShareFill className="text-xl" />
-           
-                <FacebookShareButton
-                  url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
-                  quote={"フェイスブックはタイトルが付けれるようです"}
-                  hashtag={"#hashtag"}
-                  description={"aiueo"}
-                  className="Demo__some-network__share-button"
-                  >
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
-                
-                <TwitterShareButton
-                  title={"test"}
-                  url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
-                  hashtags={["hashtag1", "hashtag2"]}
-                  >
-                  <TwitterIcon size={32} round />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  title={"test"}
-                  url={`https://horse-around-blue.vercel.app/detail/${query.id}`}
-                  hashtags={["hashtag1", "hashtag2"]}
-                  >
-                  <WhatsappIcon size={32} round />
-                </WhatsappShareButton>
-              </div>
-          
-              
-         
-              
             </div>
           </div>
         </div>

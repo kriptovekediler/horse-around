@@ -19,6 +19,7 @@
     text-white
     text-xl md:text-base 
     mb-12 mt-4
+    cursor-pointer
 }
 
 .description:hover{
