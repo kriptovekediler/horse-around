@@ -10,7 +10,7 @@ import { useWeb3 } from "../web3/providers/";
 import { useAccount } from "../web3/hooks/";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { BidModal, LoadingModal, SharesOnSale } from "../detail";
+import { BidModal, LoadingModal } from "../detail";
 
 export default function InfoCard({ horse, saleInfo }) {
   const { contractNFT, contractMarketplace, web3 } = useWeb3();
@@ -33,10 +33,6 @@ export default function InfoCard({ horse, saleInfo }) {
 
   const handleCancel = () => {
     setIsModalOpen(false);
-  };
-
-  const handleSharesModal = () => {
-    setSharesModal(true);
   };
 
   useEffect(() => {
@@ -293,15 +289,10 @@ export default function InfoCard({ horse, saleInfo }) {
             Buy Now
           </Button>
         ) : (
-          <Button onClick={handleSharesModal} full>
+          <Button onClick={() => buyItem()} full>
             Buy Now
           </Button>
         ))}
-      {sharesModal === true && (
-        <div className={styles["modal"]}>
-          <SharesOnSale horse={horse} setSharesModal={setSharesModal} />
-        </div>
-      )}
 
       {horse?.status === 4 &&
         (account?.data === horse?.publicAddress && status ? (

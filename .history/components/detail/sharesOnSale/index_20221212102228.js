@@ -33,10 +33,10 @@ const UserCard = ({ avatarUrl, name, userName }) => {
     </>
   );
 };
+
 export default function SharesOnSale({ horse, setSharesModal }) {
   const { contractNFT, contractMarketplace, web3 } = useWeb3();
   const { account } = useAccount();
-  console.log(horse);
 
   const [state, setState] = useState();
   const [leftAmount, setAmount] = useState();

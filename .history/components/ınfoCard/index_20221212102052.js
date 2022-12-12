@@ -299,7 +299,7 @@ export default function InfoCard({ horse, saleInfo }) {
         ))}
       {sharesModal === true && (
         <div className={styles["modal"]}>
-          <SharesOnSale horse={horse} setSharesModal={setSharesModal} />
+          <SharesOnSale horse={horse} />
         </div>
       )}
 

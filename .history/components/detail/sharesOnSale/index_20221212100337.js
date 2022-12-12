@@ -33,10 +33,10 @@ const UserCard = ({ avatarUrl, name, userName }) => {
     </>
   );
 };
-export default function SharesOnSale({ horse, setSharesModal }) {
+
+export default function SharesOnSale({ horse }) {
   const { contractNFT, contractMarketplace, web3 } = useWeb3();
   const { account } = useAccount();
-  console.log(horse);
 
   const [state, setState] = useState();
   const [leftAmount, setAmount] = useState();
@@ -117,8 +117,6 @@ export default function SharesOnSale({ horse, setSharesModal }) {
       .catch((err) => {
         console.log(err);
       });
-
-    setSharesModal(false);
   };
 
   console.log(horse);
@@ -167,33 +165,6 @@ export default function SharesOnSale({ horse, setSharesModal }) {
         <span className="text-white block text-center text-lg sm:text-sm md:text-sm">
           {text}
         </span>
-      ),
-    },
-    {
-      title: "Buy",
-      dataIndex: "actionButton",
-      render: (info) => (
-        <button className="bg-[#39250B] text-white hover:bg-goldMetallic transition text-lg sm:text-sm md:text-sn rounded-md h-10 px-2 w-full flex items-center justify-between gap-2">
-          <>
-            <Link href={`/detail/${horse?.horseId}/saleinfo/${info["id"]}`}>
-              <a className="flex" target={"_self"}>
-                <span
-                  onClick={(e) => buyItem(e, info["id"])}
-                  className="min-width: 50%"
-                >
-                  Buy Now
-                </span>
-                <MdChevronRight className="text-2xl" />
-              </a>
-            </Link>
-            <input
-              className="bg-[#39250B] min-width: 50%"
-              type="text"
-              onChange={handleLeftAmount}
-              value={leftAmount}
-            />
-          </>
-        </button>
       ),
     },
   ];

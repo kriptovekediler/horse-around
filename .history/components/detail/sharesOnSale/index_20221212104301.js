@@ -57,7 +57,8 @@ export default function SharesOnSale({ horse, setSharesModal }) {
   // console.log("USERS:", users);
   // console.log("Res", resp);
 
-  const handleLeftAmount = (e) => {
+  const handleLeftAmount = (e, id) => {
+    console.log(id);
     setAmount(e.target.value);
   };
 

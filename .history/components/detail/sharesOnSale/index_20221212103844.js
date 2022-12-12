@@ -58,7 +58,7 @@ export default function SharesOnSale({ horse, setSharesModal }) {
   // console.log("Res", resp);
 
   const handleLeftAmount = (e) => {
-    setAmount(e.target.value);
+    setAmount(e.target);
   };
 
   console.log("Sale Info:", horse?.saleInfo[0]?.price * leftAmount);

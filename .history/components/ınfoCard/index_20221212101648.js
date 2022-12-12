@@ -293,15 +293,14 @@ export default function InfoCard({ horse, saleInfo }) {
             Buy Now
           </Button>
         ) : (
-          <Button onClick={handleSharesModal} full>
+          <Button onClick={() => buyItem()} full>
             Buy Now
           </Button>
         ))}
-      {sharesModal === true && (
-        <div className={styles["modal"]}>
-          <SharesOnSale horse={horse} setSharesModal={setSharesModal} />
-        </div>
-      )}
+
+      <div className={styles["modal"]}>
+        <SharesOnSale horse={horse} />
+      </div>
 
       {horse?.status === 4 &&
         (account?.data === horse?.publicAddress && status ? (

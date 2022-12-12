@@ -39,7 +39,9 @@ export default function SharesOnSale({ horse, setSharesModal }) {
   console.log(horse);
 
   const [state, setState] = useState();
-  const [leftAmount, setAmount] = useState();
+  const [leftAmount, setAmount] = useState({
+    amount: "",
+  });
   const [buyNowState, setBuyNowState] = useState();
   const [id, setId] = useState();
   const router = useRouter();
@@ -58,8 +60,12 @@ export default function SharesOnSale({ horse, setSharesModal }) {
   // console.log("Res", resp);
 
   const handleLeftAmount = (e) => {
-    setAmount(e.target.value);
+    setAmount({
+      ...leftAmount,
+      [e.target.name]: e.target.value,
+    });
   };
+  console.log(leftAmount);
 
   console.log("Sale Info:", horse?.saleInfo[0]?.price * leftAmount);
   console.log("Id Info:", horse?.horseId);
@@ -190,7 +196,8 @@ export default function SharesOnSale({ horse, setSharesModal }) {
               className="bg-[#39250B] min-width: 50%"
               type="text"
               onChange={handleLeftAmount}
-              value={leftAmount}
+              value={leftAmount.amount}
+              name={horse.publicAdress}
             />
           </>
         </button>

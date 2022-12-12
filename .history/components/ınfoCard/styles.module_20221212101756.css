@@ -53,7 +53,7 @@
 .modal {
   widht: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0px;
   left: 0px;

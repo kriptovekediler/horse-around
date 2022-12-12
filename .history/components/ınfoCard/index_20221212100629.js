@@ -21,7 +21,6 @@ export default function InfoCard({ horse, saleInfo }) {
   const [finishedTime, setFinishedTime] = useState();
   const [loadingModal, setLoadingModal] = useState(false);
   const [state, setState] = useState();
-  const [sharesModal, setSharesModal] = useState(false);
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -33,10 +32,6 @@ export default function InfoCard({ horse, saleInfo }) {
 
   const handleCancel = () => {
     setIsModalOpen(false);
-  };
-
-  const handleSharesModal = () => {
-    setSharesModal(true);
   };
 
   useEffect(() => {
@@ -286,22 +281,7 @@ export default function InfoCard({ horse, saleInfo }) {
             Make Offer
           </Button>
         ))}
-
-      {horse?.status === 3 &&
-        (account?.data === horse?.publicAddress ? (
-          <Button className="cursor-not-allowed" full dark disabled>
-            Buy Now
-          </Button>
-        ) : (
-          <Button onClick={handleSharesModal} full>
-            Buy Now
-          </Button>
-        ))}
-      {sharesModal === true && (
-        <div className={styles["modal"]}>
-          <SharesOnSale horse={horse} setSharesModal={setSharesModal} />
-        </div>
-      )}
+      {/* <SharesOnSale horse={horse} user={user} /> */}
 
       {horse?.status === 4 &&
         (account?.data === horse?.publicAddress && status ? (

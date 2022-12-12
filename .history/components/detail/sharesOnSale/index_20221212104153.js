@@ -191,6 +191,7 @@ export default function SharesOnSale({ horse, setSharesModal }) {
               type="text"
               onChange={handleLeftAmount}
               value={leftAmount}
+              id={horse.name}
             />
           </>
         </button>

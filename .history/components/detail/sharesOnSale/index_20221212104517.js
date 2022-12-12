@@ -39,7 +39,9 @@ export default function SharesOnSale({ horse, setSharesModal }) {
   console.log(horse);
 
   const [state, setState] = useState();
-  const [leftAmount, setAmount] = useState();
+  const [leftAmount, setAmount] = useState({
+    amount: "",
+  });
   const [buyNowState, setBuyNowState] = useState();
   const [id, setId] = useState();
   const router = useRouter();
@@ -57,7 +59,8 @@ export default function SharesOnSale({ horse, setSharesModal }) {
   // console.log("USERS:", users);
   // console.log("Res", resp);
 
-  const handleLeftAmount = (e) => {
+  const handleLeftAmount = (e, id) => {
+    console.log(id);
     setAmount(e.target.value);
   };
 
@@ -189,7 +192,7 @@ export default function SharesOnSale({ horse, setSharesModal }) {
             <input
               className="bg-[#39250B] min-width: 50%"
               type="text"
-              onChange={handleLeftAmount}
+              onChange={(e) => handleLeftAmount(e, info["id"])}
               value={leftAmount}
             />
           </>

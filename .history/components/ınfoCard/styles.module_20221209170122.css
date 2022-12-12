@@ -1,0 +1,63 @@
+.nameBox{
+    @apply
+    flex items-center justify-between gap-2
+    mb-10
+}
+.horseName{
+    @apply
+    text-xl  2xl:text-6xl
+    font-PoppinsBold text-white
+}
+.id{
+    @apply
+    text-goldMetallic
+    text-lg 2xl:text-4xl 
+    font-PoppinsSemiBold
+}
+.description{
+    @apply
+    text-white
+    text-xl md:text-base 
+    mb-12 mt-4
+    cursor-pointer
+}
+
+.description:hover{
+    text-decoration: underline;
+}
+.infoItem{
+    @apply
+    flex items-center justify-between gap-2 
+    text-xl font-PoppinsSemiBold
+    mb-2
+}
+.yellow{
+    @apply
+    text-goldMetallic
+}
+
+.userCard{
+    @apply
+    flex items-center justify-between gap-2
+    mb-6
+}
+.userAvatar{
+    @apply
+    flex items-center justify-between gap-2
+    text-xl md:text-base
+}
+.userCardInfo{
+    @apply
+    text-white text-xl md:text-base
+    flex items-center gap-2 
+}
+.badge{
+    @apply
+    bg-goldMetallic rounded text-xl md:text-base
+    h-10 px-3 pt-1
+}
+.darkBox{
+    @apply
+    rounded-md px-4 py-3 bg-[#4444444D]
+    
+}
