@@ -106,12 +106,9 @@ export default function OwnerProfile({ user, horses }) {
 export async function getServerSideProps(context) {
   const { publicAddress } = context.query;
   console.log("publicAddress", publicAddress);
-  const res = await axios.post(
-    "https://horse-around-app.herokuapp.com/get_user",
-    {
-      publicAddress: publicAddress,
-    }
-  );
+  const res = await axios.post("http://127.0.0.1:8000/get_user", {
+    publicAddress: publicAddress,
+  });
   if (res.data.status_code === 404) {
     return {
       redirect: {
@@ -120,9 +117,7 @@ export async function getServerSideProps(context) {
       },
     };
   } else {
-    const resp = await axios.get(
-      "https://horse-around-app.herokuapp.com/get_horses"
-    );
+    const resp = await axios.get("http://127.0.0.1:8000/get_horses");
     return {
       props: {
         user: res.data,

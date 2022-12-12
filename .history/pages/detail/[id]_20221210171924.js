@@ -103,12 +103,9 @@ export default function MarketPlace({ horse }) {
 export async function getServerSideProps(context) {
   const { id } = context.query;
   console.log("ids", id);
-  const res = await axios.post(
-    "https://horse-around-app.herokuapp.com/get_horse",
-    {
-      horseId: parseInt(id),
-    }
-  );
+  const res = await axios.post("http://127.0.0.1:8000/get_horse", {
+    horseId: parseInt(id),
+  });
 
   if (res?.data.status_code === 404) {
     return {

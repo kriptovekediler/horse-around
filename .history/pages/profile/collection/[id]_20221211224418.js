@@ -36,7 +36,7 @@ export default function MarketPlace() {
     console.log("id,", router.query.id);
     const getHorse = async () => {
       await axios
-        .post("https://horse-around-app.herokuapp.com/get_horse", {
+        .post("http://127.0.0.1:8000/get_horse", {
           horseId: parseInt(router.query.id),
         })
         .then((res) => {
@@ -54,12 +54,9 @@ export default function MarketPlace() {
   const [user, setUser] = useState();
   useEffect(() => {
     const fetchMethod = async () => {
-      const response = await axios.post(
-        "https://horse-around-app.herokuapp.com/get_user",
-        {
-          publicAddress: account?.data,
-        }
-      );
+      const response = await axios.post("http://127.0.0.1:8000/get_user", {
+        publicAddress: account?.data,
+      });
       setUser(response?.data?.detail?.user);
     };
     fetchMethod();
@@ -109,12 +106,9 @@ export async function getServerSideProps(context) {
       },
     };
   }
-  const response = await axios.post(
-    "https://horse-around-app.herokuapp.com/verify",
-    {
-      token: jwt,
-    }
-  );
+  const response = await axios.post("http://127.0.0.1:8000/verify", {
+    token: jwt,
+  });
 
   if (response?.data?.status_code != 200) {
     return {
