@@ -1,0 +1,23 @@
+.toast {
+  padding: 15px 30px;
+  background: #fff;
+  border-radius: 30px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  //transform: translate(-50%, -15px);
+  transition: 1s ease;
+  z-index: 111;
+}
+
+.toast.on {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+}
+
+.toast h6 {
+  color: #111;
+  font-size: 16px;
+  text-align: center;
+}

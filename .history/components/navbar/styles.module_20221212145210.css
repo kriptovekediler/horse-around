@@ -1,0 +1,28 @@
+.header {
+  @apply absolute w-full z-30
+    px-32 py-8
+    flex items-center justify-between 
+    bg-black;
+}
+.nav {
+  @apply flex items-center justify-between 2xl:gap-7 xl:gap-6 lg:gap-4 text-white;
+}
+.navLink {
+  @apply text-2xl 2xl:text-lg xl:text-base  transition
+    hover:text-goldMetallic;
+}
+.navButton {
+  @apply transition
+    text-xl bg-themeBlack rounded
+    py-[5px] px-4 
+    hover:bg-goldMetallic
+    hover:text-themeBlack;
+}
+
+.navDisconnectButton {
+  @apply transition
+    text-xl bg-themeBlack rounded
+    py-[5px] px-4 
+    hover:bg-red-900
+    hover:text-white;
+}

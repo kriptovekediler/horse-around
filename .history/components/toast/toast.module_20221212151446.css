@@ -1,0 +1,37 @@
+.toast {
+  padding: 15px 30px;
+  background: #fff;
+  border-radius: 30px;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  //transform: translate(-50%, -15px);
+  transition: 1s ease;
+  z-index: 111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:15px;
+}
+
+.toast.on {
+  padding: 15px 30px;
+  background: #fff;
+  border-radius: 30px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:15px
+  top: 22px;
+  left: 50%;
+  //transform: translate(-50%, -15px);
+  transition: 1s ease;
+  z-index: 111;
+}
+
+.toast.on > h6 {
+  color: crimson;
+  font-size: 16px;
+  text-align: center;
+}
