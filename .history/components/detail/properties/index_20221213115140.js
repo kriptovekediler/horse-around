@@ -5,19 +5,20 @@ import { jsPDF } from "jspdf";
 
 export default function Properties({ horse }) {
   const downloadPDF = () => {
-    const input = document.getElementById("download");
+    const input = document.getElementById("id");
     html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF("p", "pt", "a4");
       pdf.addImage(imgData, "JPEG", 10, 50);
       pdf.save("save.pdf");
+
+      pdf.html(document.querySelector(".grid"), {
+        callback: function (pdf) {
+          pdf.save("mypdf.pdf");
+        },
+      });
     });
 
-    // pdf.html(document.querySelector(".grid"), {
-    //   callback: function (pdf) {
-    //     pdf.save("mypdf.pdf");
-    //   },
-    // });
     // // pdf.output('dataurlnewwindow');
   };
 

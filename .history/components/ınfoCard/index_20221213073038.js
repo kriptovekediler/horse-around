@@ -233,7 +233,7 @@ export default function InfoCard({ horse, saleInfo }) {
           ) : (
             <p></p>
           )}
-          {/* <span>P/S {state}</span> */}
+          <span>P/S {state}</span>
         </div>
         <Link href={horse?.preferenceDescription}>
           <img
@@ -262,7 +262,7 @@ export default function InfoCard({ horse, saleInfo }) {
         <div className={styles.infoItem}>
           <span>Dam-Sibling</span>
           <span className={styles.yellow}>
-            {horse?.damName} - {horse?.damSiblingsName}
+            {horse?.damName}, {horse?.damSiblingsName}
           </span>
         </div>
         <div className={styles.infoItem}>

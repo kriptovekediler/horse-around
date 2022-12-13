@@ -13,11 +13,11 @@ export default function Properties({ horse }) {
       pdf.save("save.pdf");
     });
 
-    // pdf.html(document.querySelector(".grid"), {
-    //   callback: function (pdf) {
-    //     pdf.save("mypdf.pdf");
-    //   },
-    // });
+    pdf.html(document.querySelector(".grid"), {
+      callback: function (pdf) {
+        pdf.save("mypdf.pdf");
+      },
+    });
     // // pdf.output('dataurlnewwindow');
   };
 

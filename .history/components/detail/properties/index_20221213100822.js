@@ -5,24 +5,21 @@ import { jsPDF } from "jspdf";
 
 export default function Properties({ horse }) {
   const downloadPDF = () => {
-    const input = document.getElementById("download");
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "pt", "a4");
-      pdf.addImage(imgData, "JPEG", 10, 50);
-      pdf.save("save.pdf");
-    });
-
-    // pdf.html(document.querySelector(".grid"), {
-    //   callback: function (pdf) {
-    //     pdf.save("mypdf.pdf");
-    //   },
+    console.log("onclicked");
+    // const input = document.getElementById("divToPrint");
+    // html2canvas(input).then((canvas) => {
+    //   const imgData = canvas.toDataURL(
+    //     "https://www.tjk.org/TR/YarisSever/YarisSever/Index"
+    //   );
+    //   const pdf = new jsPDF();
+    //   pdf.addImage(imgData, "JPEG", 0, 0);
+    //   // pdf.output('dataurlnewwindow');
+    //   pdf.save("download.pdf");
     // });
-    // // pdf.output('dataurlnewwindow');
   };
 
   return (
-    <div className={styles.box} id="download">
+    <div className={styles.box}>
       <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-20 md:gap-10 sm:gap-0 text-white mb-10">
         <div className="border-r-2 border-[#FFFFFF1A] pr-20 sm:pr-0 md:pr-0 md:border-0 sm:border-0 md:mb-10 sm:mb-10">
           <h2 className={styles.title}>General Properties</h2>
@@ -93,9 +90,12 @@ export default function Properties({ horse }) {
             <div className={styles.documentItems}>
               <span className={styles.documentName}>Document Name</span>
               <span className={styles.documentDate}>24.06.2022</span>
-              <button className={styles.downloadButton} onClick={downloadPDF}>
+              <button className={styles.downloadButton}>
                 Download{" "}
-                <DownloadIcon className="text-sm 2xl:text-2xl hover:fill-goldMetallic" />
+                <DownloadIcon
+                  className="text-sm 2xl:text-2xl hover:fill-goldMetallic"
+                  onClick={downloadPDF}
+                />
               </button>
             </div>
           </div>

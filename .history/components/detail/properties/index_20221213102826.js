@@ -5,24 +5,18 @@ import { jsPDF } from "jspdf";
 
 export default function Properties({ horse }) {
   const downloadPDF = () => {
-    const input = document.getElementById("download");
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "pt", "a4");
-      pdf.addImage(imgData, "JPEG", 10, 50);
-      pdf.save("save.pdf");
-    });
+    console.log("onclicked");
 
-    // pdf.html(document.querySelector(".grid"), {
-    //   callback: function (pdf) {
-    //     pdf.save("mypdf.pdf");
-    //   },
-    // });
+    const pdf = new jsPDF();
+    console.log("onclicked", pdf);
+    pdf.addPage();
+
     // // pdf.output('dataurlnewwindow');
+    pdf.save("save.pdf");
   };
 
   return (
-    <div className={styles.box} id="download">
+    <div className={styles.box}>
       <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-20 md:gap-10 sm:gap-0 text-white mb-10">
         <div className="border-r-2 border-[#FFFFFF1A] pr-20 sm:pr-0 md:pr-0 md:border-0 sm:border-0 md:mb-10 sm:mb-10">
           <h2 className={styles.title}>General Properties</h2>

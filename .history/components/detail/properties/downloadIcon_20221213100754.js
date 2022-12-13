@@ -1,6 +1,6 @@
-function DownloadIcon() {
+function DownloadIcon(props) {
   return (
-    <div className="fill-white">
+    <div className="fill-white" {...props}>
       <svg
         width="14"
         height="18"
